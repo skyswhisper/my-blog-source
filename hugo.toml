@@ -17,13 +17,14 @@ baseURL = "http://localhost:1313"
 # theme list
 theme = ["FixIt"] # enable in your site config file
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-cn"
 # language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
+languageCode = "zh-cn"
 # language name ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
+languageName = "简体中文"
 # whether to include Chinese/Japanese/Korean
-hasCJKLanguage = false
+hasCJKLanguage = true
+summaryLength = 100    # 摘要显示的字数
 # copyright description used only for seo schema
 copyright = ""
 # whether to use robots.txt
@@ -45,14 +46,14 @@ enableEmoji = true
 [menu]
 
 [[menu.main]]
-identifier = "archives"
+identifier = "posts"
 parent = ""
 # you can add extra information before the name (HTML format is supported), such as icons
 pre = ""
 # you can add extra information after the name (HTML format is supported), such as icons
 post = ""
-name = "Archives"
-url = "/archives/"
+name = "全部文章"
+url = "/posts/"
 # title will be shown when you hover on this menu link
 title = ""
 weight = 1
@@ -64,37 +65,64 @@ class = ""
 # whether set as a draft menu item whose function is similar to a draft post/page
 draft = false
 # FixIt 0.2.16 | NEW add fontawesome icon to a specific menu item
-icon = "fa-solid fa-archive"
+icon = "fa-solid fa-tags"
 # FixIt 0.2.16 | NEW set menu item type, optional values: ["mobile", "desktop"]
 type = ""
 # FixIt 0.3.9 | NEW whether to show the submenu item divider line
 divided = false
 
 [[menu.main]]
-identifier = "categories"
+identifier = "program"
 parent = ""
 pre = ""
 post = ""
-name = "Categories"
-url = "/categories/"
+name = "项目作品"
+url = "/program/"
 title = ""
 weight = 2
 
 [menu.main.params]
-icon = "fa-solid fa-folder-tree"
+icon = "fa-solid fa-tags"
 
 [[menu.main]]
-identifier = "tags"
+identifier = "study"
 parent = ""
 pre = ""
 post = ""
-name = "Tags"
-url = "/tags/"
+name = "技能学习"
+url = "/study/"
 title = ""
 weight = 3
 
 [menu.main.params]
 icon = "fa-solid fa-tags"
+
+[[menu.main]]
+identifier = "friends"
+parent = ""
+pre = ""
+post = ""
+name = "友链"
+url = "/friends/"
+title = ""
+weight = 4
+
+[menu.main.params]
+icon = "fa-solid fa-tags"
+
+[[menu.main]]
+identifier = "skyswhisper"
+parent = ""
+pre = ""
+post = ""
+name = "私语"
+url = "/skyswhisper/"
+title = ""
+weight = 5
+
+[menu.main.params]
+icon = "fa-solid fa-tags"
+
 
 # -------------------------------------------------------------------------------------
 # Related content Configuration
@@ -567,13 +595,13 @@ copyright = true
 # whether to show the author
 author = true
 # Site creation year
-since = ""
+since = "2025"
 # FixIt 0.2.12 | NEW Public network security only in China (HTML format is supported)
 gov = ""
 # ICP info only in China (HTML format is supported)
 icp = ""
 # license info (HTML format is supported)
-license = ""
+license = "除非另有说明，本站文章采用 <a rel='license external nofollow noopener noreffer' href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议。"
 
 # FixIt 0.3.0 | NEW whether to show Hugo and theme info
 [params.footer.powered]
@@ -583,13 +611,13 @@ themeLogo = true
 
 # FixIt 0.2.17 | CHANGED Site creation time
 [params.footer.siteTime]
-enable = false
+enable = true
 animate = true
 icon = "fa-solid fa-heartbeat"
 pre = ""
-value = ""
+value = "2025-11-28T20:52:47+08:00"
 
-# e.g. "2021-12-18T16:15:22+08:00"
+# e.g. "2021-12-18T19:28:00+08:00"
 # FixIt 0.2.17 | NEW footer lines order, optional values: ["first", 0, 1, 2, 3, 4, 5, "last"]
 [params.footer.order]
 powered = 0
@@ -608,9 +636,14 @@ dateFormat = "01-02"
 # Section page config (all pages in section)
 [params.section]
 # special amount of pages in each section page
-paginate = 20
+paginate = 10
 # date format (month and day)
-dateFormat = "01-02"
+dateFormat = "2006-01-02"
+# 是否在列表页显示预览图？一定要设为 true
+showFeaturedImage = true
+disableFeaturedImage = false
+# 摘要设置
+showSummary = true 
 
 # FixIt 0.3.10 | NEW Section feed config for RSS, Atom and JSON feed.
 [params.section.feed]
@@ -664,7 +697,7 @@ avatarMenu = ""
 # title shown in home page (HTML format is supported)
 title = "sky"
 # subtitle shown in home page (HTML format is supported)
-subtitle = "表达，为了无法表达的共鸣"
+subtitle = ""
 # whether to use typeit animation for subtitle
 typeit = true
 # whether to show social links
@@ -1123,7 +1156,7 @@ c4u = false
 # Page config
 [params.page]
 # FixIt 0.2.18 | NEW whether to enable the author's avatar of the post
-authorAvatar = true
+authorAvatar = false
 # whether to hide a page from home page
 hiddenFromHomePage = false
 # whether to hide a page from search results

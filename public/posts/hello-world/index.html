@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>天际私语：博客的毁灭与重生 - 天际私语</title><meta name="author" content="Sky">
+<meta name="description" content="从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几年。"><meta name="keywords" content='Hugo, WordPress, Linux, 故障复盘'>
+  <meta itemprop="name" content="天际私语：博客的毁灭与重生">
+  <meta itemprop="description" content="从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几年。">
+  <meta itemprop="datePublished" content="2025-11-27T21:15:00+08:00">
+  <meta itemprop="dateModified" content="2025-11-27T21:15:00+08:00">
+  <meta itemprop="wordCount" content="1203">
+  <meta itemprop="keywords" content="Hugo,WordPress,Linux,故障复盘"><meta property="og:url" content="http://localhost:1313/posts/hello-world/">
+  <meta property="og:site_name" content="天际私语">
+  <meta property="og:title" content="天际私语：博客的毁灭与重生">
+  <meta property="og:description" content="从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几年。">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-27T21:15:00+08:00">
+    <meta property="article:modified_time" content="2025-11-27T21:15:00+08:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="WordPress">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="故障复盘">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="天际私语：博客的毁灭与重生">
+  <meta name="twitter:description" content="从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几年。">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/hello-world/" title="天际私语：博客的毁灭与重生 - 天际私语" /><link rel="prev" type="text/html" href="http://localhost:1313/program/hello-world/" title="天际私语：博客的毁灭与重生" /><link rel="next" type="text/html" href="http://localhost:1313/posts/test/" title="终极排查测试文章" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/hello-world/index.md" title="天际私语：博客的毁灭与重生 - 天际私语"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "天际私语：博客的毁灭与重生",
+    "inLanguage": "zh-cn",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/hello-world\/"
+    },"genre": "posts","keywords": "Hugo, WordPress, Linux, 故障复盘","wordcount":  1203 ,
+    "url": "http:\/\/localhost:1313\/posts\/hello-world\/","datePublished": "2025-11-27T21:15:00+08:00","dateModified": "2025-11-27T21:15:00+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Sky"
+      },"description": "从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几年。"
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="天际私语"><span class="header-title-text">天际私语</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 全部文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/program/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 项目作品</a></li><li class="menu-item">
+              <a class="menu-link" href="/study/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 技能学习</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item">
+              <a class="menu-link" href="/skyswhisper/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 私语</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/" title="关于我"><i class='fa-solid fa-user-circle fa-fw me-1'></i> 关于我</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" role="button" aria-label="切换主题" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="天际私语"><span class="header-title-text">天际私语</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 全部文章</a></li><li class="menu-item"><a class="menu-link" href="/program/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 项目作品</a></li><li class="menu-item"><a class="menu-link" href="/study/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 技能学习</a></li><li class="menu-item"><a class="menu-link" href="/friends/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item"><a class="menu-link" href="/skyswhisper/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 私语</a></li><li class="menu-item"><a class="menu-link" href="/about/" title="关于我"><i class='fa-solid fa-user-circle fa-fw me-1'></i> 关于我</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>天际私语：博客的毁灭与重生</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Sky</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" class="post-category" title="分类 - 技术杂谈"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 技术杂谈</a>&ensp;<a href="/categories/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/" class="post-category" title="分类 - 建站日志"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 建站日志</a></span></div><div class="post-meta-line"><span title="发布于 2025-11-27 21:15:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-11-27">2025-11-27</time></span>&nbsp;<span title="1203 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-前传老旧笔记本上的-wordpress">🕰️ 前传：老旧笔记本上的 WordPress</a></li>
+    <li><a href="#-崩溃连锁硬件的花式死亡">💥 崩溃连锁：硬件的“花式死亡”</a></li>
+    <li><a href="#-终结云端的崩塌">☁️ 终结：云端的崩塌</a></li>
+    <li><a href="#-重生拥抱-hugo-与-github-pages">🚀 重生：拥抱 Hugo 与 GitHub Pages</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><blockquote>
+<p><strong>这是我第二次搭建博客。</strong></p>
+</blockquote>
+<h2 class="heading-element" id="-前传老旧笔记本上的-wordpress"><span>🕰️ 前传：老旧笔记本上的 WordPress</span>
+  <a href="#-%e5%89%8d%e4%bc%a0%e8%80%81%e6%97%a7%e7%ac%94%e8%ae%b0%e6%9c%ac%e4%b8%8a%e7%9a%84-wordpress" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>上大学的时候我看见其他学长写的博客，觉得很有趣，于是准备尝试搭一个博客。</p>
+<p>我的第一个博客用的是 <strong>WordPress</strong> 框架。当时我正在做 3D 打印机，手里正好收了一台 <strong>2011 年的旧笔记本电脑</strong> 做上位机，本着物尽其用的原则，我把第一个博客部署在了那上面。</p>
+<h2 class="heading-element" id="-崩溃连锁硬件的花式死亡"><span>💥 崩溃连锁：硬件的“花式死亡”</span>
+  <a href="#-%e5%b4%a9%e6%ba%83%e8%bf%9e%e9%94%81%e7%a1%ac%e4%bb%b6%e7%9a%84%e8%8a%b1%e5%bc%8f%e6%ad%bb%e4%ba%a1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>有趣的事情很快就发生了。那台老电脑的处理器、内存和硬盘仿佛约好了一样，接连出现了问题。第一周运行的时候尚且安好，到了第二周，各种诡异的故障开始轮番上阵。</p>
+<div class="details admonition failure open">
+  <div class="details-summary admonition-title"><i class="icon fa-fw fa-solid fa-xmark" aria-hidden="true"></i>故障一：Kernel Panic (内核恐慌)<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></div>
+  <div class="details-content">
+    <div class="admonition-content"><p>首先出现的是 <code>Kernel Panic</code>，报错信息赫然写着：
+<code>attempt to kill the idle task!</code></p>
+<p>这是 Linux 内核在遇到无法处理的致命错误时（一般是硬件错误），为了保护数据安全而采取的一种**“紧急停机”**机制。</p>
+<p><strong>🛠️ 解决方法</strong>：我把内存条拔下来，用橡皮擦拭了一遍金手指，重新插回去之后就好了。所以我推测是内存接触不良的问题。这种情况先后出现了两次。</p>
+</div>
+  </div>
+</div>
+<div class="details admonition warning open">
+  <div class="details-summary admonition-title"><i class="icon fa-fw fa-solid fa-exclamation-triangle" aria-hidden="true"></i>故障二：CPU 死锁<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></div>
+  <div class="details-content">
+    <div class="admonition-content"><p>过了几天，又出现了 CPU 卡死的情况。是 <code>soft lockup</code> 还是 <code>hard lockup</code> 我记不清了，大概就是 CPU 的一个核遇到了 Bug，陷入了无限循环或者等待中。</p>
+<p>系统的看门狗定时器（Watchdog）发出了相应警报，<code>cpu#0</code> 和 <code>cpu#3</code> 先后卡死，我真服了。</p>
+</div>
+  </div>
+</div>
+<div class="details admonition danger open">
+  <div class="details-summary admonition-title"><i class="icon fa-fw fa-solid fa-bolt" aria-hidden="true"></i>故障三：文件系统损坏<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></div>
+  <div class="details-content">
+    <div class="admonition-content">在第二次处理 Kernel Panic 的时候，又遇到了硬盘问题：<code>fsck Error</code>。
+大概是文件系统出错了，它的索引指示和实际存储不一致。虽然用系统自带的 <code>fsck</code> 修复工具手动修复了一下就能进系统，但这明显是强制关机的后遗症。</div>
+  </div>
+</div>
+<p>以上这些问题，直接导致了我很长一段时间不接受二手的电子产品——<strong>感觉有点亏了。</strong></p>
+<h2 class="heading-element" id="-终结云端的崩塌"><span>☁️ 终结：云端的崩塌</span>
+  <a href="#-%e7%bb%88%e7%bb%93%e4%ba%91%e7%ab%af%e7%9a%84%e5%b4%a9%e5%a1%8c" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>就是这样不断的修复，缝缝补补又三年。</p>
+<p>直到 <strong>2025 年 11 月 18 号</strong> 前几天，Docker 突然打不开了。因为我的网站是跑在 Docker 容器里的，这直接导致网站失联。经过检查，是因为设置的 IP 地址和现有设备冲突导致的网络问题。当时手头有其他事情，就没及时解决。</p>
+<p><strong>然而，压死骆驼的最后一根稻草来了。</strong></p>
+<p>到了 18 号，<strong>Cloudflare</strong> 居然崩溃了，导致了全球接近一半的互联网宕机 4 小时（不过中国内地的网络基本没受影响，所以大家可能感觉不到）。</p>
+<p>不幸的是，我第一个博客用的正是 CF 的 CDN 服务，所以也跟着“原地爆炸”了。这件事可以说让我彻底放弃了维护那个老旧的博客。</p>
+<h2 class="heading-element" id="-重生拥抱-hugo-与-github-pages"><span>🚀 重生：拥抱 Hugo 与 GitHub Pages</span>
+  <a href="#-%e9%87%8d%e7%94%9f%e6%8b%a5%e6%8a%b1-hugo-%e4%b8%8e-github-pages" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>后来，我又看见学长使用了静态网站部署在 <strong>GitHub Pages</strong> 上的方法。</p>
+<p>我觉得这很有<strong>极客感</strong>。我认为这种安全、稳定且免费的静态网站，才更加适合不需要数据库交互的个人用户。</p>
+<p>最后我选择了 <strong>Hugo</strong>。</p>
+<ul>
+<li>它主要由 Go 语言编写，部署简单。</li>
+<li>性能强大，在内容较多时，生成速度显著快于 Hexo 等其他框架。</li>
+<li>技术门槛在静态框架中较低，非常适合尝试。</li>
+</ul>
+<hr>
+<p>于是，这个你正在浏览的网站——**「天际私语」**诞生了。它是我技术探索的新起点，也希望它能比它的“前任”活得更久一些。</p>
+<blockquote>
+<p>有些感受，存在于语言的边界之外；
+有些共鸣，发生在沉默的瞬间。
+当真正的理解达成时，一切表达都显得多余。</p>
+<p><strong>表达，为了无法表达的共鸣——欢迎来到「天际私语」</strong></p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="更新于 2025-11-27 21:15:00">更新于 2025-11-27&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/hello-world/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/F:%5cmyblog%5ccontent%5cposts%5chello-world.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/hello-world/" data-title="天际私语：博客的毁灭与重生" data-hashtags="Hugo,WordPress,Linux,故障复盘"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/hello-world/" data-hashtag="Hugo"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/hello-world/" data-title="天际私语：博客的毁灭与重生"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/hugo/" class="post-tag" title="标签 - Hugo">Hugo</a><a href="/tags/wordpress/" class="post-tag" title="标签 - WordPress">WordPress</a><a href="/tags/linux/" class="post-tag" title="标签 - Linux">Linux</a><a href="/tags/%E6%95%85%E9%9A%9C%E5%A4%8D%E7%9B%98/" class="post-tag" title="标签 - 故障复盘">故障复盘</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/1st-post/" class="post-nav-item" rel="prev" title="我的第一篇博客文章"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>我的第一篇博客文章</a><a href="/posts/test/" class="post-nav-item" rel="next" title="终极排查测试文章">终极排查测试文章<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ul>
+    <li><a href="#-前传老旧笔记本上的-wordpress">🕰️ 前传：老旧笔记本上的 WordPress</a></li>
+    <li><a href="#-崩溃连锁硬件的花式死亡">💥 崩溃连锁：硬件的“花式死亡”</a></li>
+    <li><a href="#-终结云端的崩塌">☁️ 终结：云端的崩塌</a></li>
+    <li><a href="#-重生拥抱-hugo-与-github-pages">🚀 重生：拥抱 Hugo 与 GitHub Pages</a></li>
+  </ul>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.152.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha.3-20251124100610-99fd4fb7"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span><span class="license footer-divider">除非另有说明，本站文章采用 <a rel='license external nofollow noopener noreffer' href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议。</span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i><span class="run-times ms-1">网站运行中……</span></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="目录"><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/js/config/e2aee69cf0508da721fcf1b13ccf2888.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>

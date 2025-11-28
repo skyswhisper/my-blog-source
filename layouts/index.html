@@ -1,0 +1,407 @@
+
+
+<!-- 强制此页面使用 Dark Mode -->
+<script>
+  document.documentElement.setAttribute('data-theme', 'dark');
+</script>
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta name="theme" content='FixIt v0.4.0-alpha.3-20251124100610-99fd4fb7'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>天际私语</title><meta name="author" content="">
+<meta name="description" content="">
+  <meta itemprop="name" content="天际私语">
+  <meta itemprop="description" content="立即启程">
+  <meta itemprop="datePublished" content="2025-01-01T10:00:00+08:00">
+  <meta itemprop="dateModified" content="2025-01-01T10:00:00+08:00">
+  <meta itemprop="wordCount" content="1"><meta property="og:url" content="http://localhost:1313/">
+  <meta property="og:site_name" content="天际私语">
+  <meta property="og:title" content="天际私语">
+  <meta property="og:description" content="立即启程">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="天际私语">
+  <meta name="twitter:description" content="立即启程">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/" title="天际私语" /><link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="天际私语"><link rel="search" type="application/json" href="http://localhost:1313/search.json" title="天际私语"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "http:\/\/localhost:1313\/","inLanguage": "en","name": "天际私语"
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto">
+  
+<!-- ================== START: 最终版-暗黑流体切片特效 (修复版) ================== -->
+<!-- 1. 底层背景 -->
+<div id="static-bg" style="
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+    background-image: url('/images/bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.0) blur(5px);
+    transform: scale(1.1);
+    pointer-events: none;
+"></div>
+<!-- 2. 顶层画布 -->
+<p><canvas id="image-grid" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none;"></canvas></p>
+<script>
+(function() {
+    const canvas = document.getElementById('image-grid');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    
+    // ============ 【配置区】 ============
+    const CONFIG = {
+        imgSrc: '/images/bg.jpg', // 【关键】必须和上面的背景图一致
+        
+        // 切片形状
+        cols: 10,             // 列数 (越多越细腻)
+        rows: 30,             // 行数
+        
+        // 椭圆力场
+        mouseRadiusX: 400,    // 宽范围
+        mouseRadiusY: 120,    // 窄范围
+        
+        // 物理手感
+        dragStrength: 1.75,    // 拖拽总力度
+        dragRatioY: 0.15,      // 【关键修改】竖直力度系数 (0.1代表竖直力只有水平力的10%)
+        
+        stiffness: 0.15,      // 回弹硬度
+        damping: 0.4         // 摩擦力 (0.93 非常顺滑)
+    };
+    // ===================================
+
+    let mouse = { x: -1000, y: -1000, vx: 0, vy: 0 };
+    let image = new Image();
+    image.src = CONFIG.imgSrc;
+    
+    image.onload = () => {
+        init();
+        animate();
+    };
+
+    class Particle {
+        // 【修改 1】构造函数增加 sw, sh (Source Width/Height)
+        constructor(x, y, w, h, u, v, sw, sh) {
+            this.originX = x; 
+            this.originY = y;
+            this.x = x;       
+            this.y = y;
+            this.w = w;       // 屏幕显示的宽
+            this.h = h;       // 屏幕显示的高
+            
+            this.u = u;       // 原图剪切位置 X
+            this.v = v;       // 原图剪切位置 Y
+            this.sw = sw;     // 【新增】原图剪切宽度
+            this.sh = sh;     // 【新增】原图剪切高度
+            
+            this.vx = 0;
+            this.vy = 0;
+        }
+
+        update() {
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            
+            let normalizedDistSq = (dx * dx) / (CONFIG.mouseRadiusX * CONFIG.mouseRadiusX) + 
+                                   (dy * dy) / (CONFIG.mouseRadiusY * CONFIG.mouseRadiusY);
+
+            if (normalizedDistSq < 1) {
+                let normDist = Math.sqrt(normalizedDistSq);
+                let forceFactor = (1 - normDist);
+
+                this.vx += mouse.vx * forceFactor * CONFIG.dragStrength;
+                this.vy += mouse.vy * forceFactor * CONFIG.dragStrength * CONFIG.dragRatioY;
+            }
+
+            let springDx = this.originX - this.x;
+            let springDy = this.originY - this.y;
+
+            this.vx += springDx * CONFIG.stiffness;
+            this.vy += springDy * CONFIG.stiffness;
+
+            this.vx *= CONFIG.damping;
+            this.vy *= CONFIG.damping;
+
+            this.x += this.vx;
+            this.y += this.vy;
+        }
+
+        draw() {
+            // 【修改 2】drawImage 使用计算好的 sw 和 sh
+            ctx.drawImage(
+                image, 
+                this.u, this.v,     // 原图起点
+                this.sw, this.sh,   // 【修复】原图剪切尺寸 (修正了撕裂问题)
+                this.x, this.y,     // 屏幕位置
+                this.w + 1.0, this.h + 1.0 // 屏幕尺寸 (保留+1防止缝隙)
+            );
+        }
+    }
+
+    function init() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        particles = [];
+
+        const tileW = width / CONFIG.cols;
+        const tileH = height / CONFIG.rows;
+        
+        // 计算 Cover 比例
+        const scale = Math.max(width / image.width, height / image.height);
+        const offsetX = (width - image.width * scale) / 2;
+        const offsetY = (height - image.height * scale) / 2;
+
+        // 【修改 3】预先计算原图上的采样切片大小
+        // 因为屏幕上的 tileW 是缩放后的，所以原图上的尺寸要除以 scale
+        const sourceChunkW = tileW / scale;
+        const sourceChunkH = tileH / scale;
+
+        for (let i = 0; i < CONFIG.cols; i++) {
+            for (let j = 0; j < CONFIG.rows; j++) {
+                let x = i * tileW;
+                let y = j * tileH;
+                
+                // 纹理映射
+                let u = (x - offsetX) / scale;
+                let v = (y - offsetY) / scale;
+
+                // 【修改 4】传入 sourceChunkW 和 sourceChunkH
+                particles.push(new Particle(x, y, tileW, tileH, u, v, sourceChunkW, sourceChunkH));
+            }
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+        mouse.vx = 0;
+        mouse.vy = 0;
+        requestAnimationFrame(animate);
+    }
+
+    window.addEventListener('resize', init);
+    
+    window.addEventListener('mousemove', e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        mouse.vx = e.movementX || 0; 
+        mouse.vy = e.movementY || 0;
+    });
+
+    window.addEventListener('mouseleave', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+    });
+
+})();
+</script>
+<!-- ... 上面的流体背景特效代码千万别动 ... -->
+    
+    <div class="wrapper" data-page-style="normal">
+  {{ partial "header.html" . }}
+<main class="fi-container"><div class="page home"><div class="home-profile"><div class="home-avatar"><a href="/archives/" title="Archives"><img src='/images/avatar.jpg' alt="Home avatar" height="96" width="96"></a></div><h1 class="home-title">sky</h1><div class="links"><a href="https://github.com/skyswhisper" title="GitHub"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-brands fa-github-alt fa-fw" aria-hidden="true"></i>
+    </a><a href="https://space.bilibili.com/1492107462" title="bilibili"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-brands fa-bilibili" aria-hidden="true"></i>
+    </a><a href="/index.xml" title="RSS"target="_blank" rel="external nofollow noopener noreferrer me"><i class="fa-solid fa-rss fa-fw" aria-hidden="true"></i>
+    </a></div></div>
+<div class="single">
+          <div class="content" id="content">
+            
+
+<!-- ... 从这里开始替换下半部分 ... -->
+<!-- 1. 副标题 (初始是隐藏的，等脚本移动位置后再显示) -->
+<!-- 调整 font-size: 2.5rem 就可以改变大小 -->
+<h2 id="my-subtitle" style="
+    color: #ffffff !important; 
+    text-align: center; 
+    font-size: 4rem;   /* <--- 这里调整字体大小！(原先可能是1.5) */
+    font-weight: bold;   /* 加粗 */
+    margin: 4rem 4;      /* 上下间距 */
+    min-height: 0em; 
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6); /* 加重阴影，防止看不清 */
+    border: none !important;
+    display: none;       /* 先隐藏，移位成功后再显示，防止闪烁 */
+"></h2>
+<!-- 2. 按钮容器 -->
+<!-- 修改后 -->
+<div class="home-button-container" id="landing-btn-container" style="position: relative; z-index: 10; margin-top: 2rem;">
+  <!-- 注意：href 改成了 javascript:void(0) -->
+  <a href="javascript:void(0);" class="enter-btn" onclick="activateBlog()">
+    <i class="fa-solid fa-paper-plane"></i> 立即启程
+  </a>
+</div>
+
+<!-- ================== 这里是文章列表 (正确位置) ================== -->
+<div id="hidden-post-list">
+    {{- /* 获取最新 5 篇文章 */ -}}
+    {{- $pages := where .Site.RegularPages "Type" "posts" -}}
+    {{- range first 5 $pages -}}
+    <article class="single summary" style="display: flex; flex-direction: column; gap: 1rem;">
+        
+        {{- /* 1. 这里是新增的图片显示逻辑 */ -}}
+        {{- /* 优先读取 featuredImagePreview，如果没有则读取 featuredImage */ -}}
+        {{- $image := .Params.featuredImagePreview | default .Params.featuredImage -}}
+        {{- if $image -}}
+        <div class="featured-image-preview">
+            <a href="{{ .RelPermalink }}">
+                <!-- 强制设置最大高度和宽度，防止图片撑爆布局 -->
+                <img src="{{ $image }}" alt="{{ .Title }}" style="width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px;">
+            </a>
+        </div>
+        {{- end -}}
+
+        {{- /* 2. 标题 */ -}}
+        <h2 class="single-title" style="margin: 0;">
+            <a href="{{ .RelPermalink }}" style="color: #fff; text-decoration: none;">
+                {{ .Title }}
+            </a>
+        </h2>
+
+        {{- /* 3. 摘要 (优先显示 Description，没有则显示 Summary) */ -}}
+        <div class="content" style="font-size: 1rem; color: #ddd; line-height: 1.6;">
+            {{- .Description | default .Summary | plainify | truncate 140 -}}
+        </div>
+
+        {{- /* 4. 阅读更多按钮 */ -}}
+        <div class="post-footer">
+            <a href="{{ .RelPermalink }}" style="font-size: 0.9rem; color: #aaa;">阅读全文 <i class="fa-solid fa-angle-right"></i></a>
+        </div>
+    </article>
+    {{- end -}}
+    
+    <!-- 更多按钮 -->
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="/posts/" style="display: inline-block; padding: 10px 30px; border: 1px solid rgba(255,255,255,0.3); border-radius: 25px; color: #fff; background: rgba(255,255,255,0.1); text-decoration: none;">查看全部</a>
+    </div>
+</div>
+<!-- ============================================================= -->
+<!-- 3. 引入 TypeIt 库 -->
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+<!-- 4. 魔法脚本：移位 + 打字 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // --- 第一步：移花接木 (把副标题挪到社交图标上面) ---
+    const subtitle = document.getElementById('my-subtitle');
+    const socialLinks = document.querySelector('.home-profile .links'); // 找到社交图标栏
+    const profile = document.querySelector('.home-profile'); // 找到个人档案大框
+    
+    if (subtitle && socialLinks && socialLinks.parentNode) {
+      // 如果找到了社交图标，就把副标题插在它前面
+      socialLinks.parentNode.insertBefore(subtitle, socialLinks);
+      subtitle.style.display = "block"; // 移位成功，显示出来
+    } else if (profile) {
+      // 如果没找到社交图标（万一你关了），就插在 profile 的最后
+      profile.appendChild(subtitle);
+      subtitle.style.display = "block";
+    } else {
+      // 实在找不到家，就原地显示
+      subtitle.style.display = "block";
+    }
+
+    // --- 第二步：开始打字 ---
+    new TypeIt("#my-subtitle", {
+      speed: 100,       
+      lifeLike: true,
+      cursor: true,
+      cursorChar: "|",
+      loop: false, 
+    })
+    .type("表达，")       
+    .pause(200)          // 停顿 0.8 秒
+    .type("为了无法表达的共鸣 ") 
+    .go();
+  });
+</script></div>
+        </div></div></main>
+        <footer class="footer">
+  {{ partial "footer.html" . }}
+</footer>
+</div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/js/config/3976528693a0108357f4928017600865.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>
+
+
+
+<script>
+    // 1. 确保 CSS 能识别这是首页
+    document.body.classList.add('home');
+
+    // 2. 页面初始化逻辑
+    function initPage() {
+        var hasVisited = sessionStorage.getItem('homeVisited');
+
+        if (hasVisited === 'true') {
+            // === 情况 A: 已经来过 (刷新或返回) ===
+            document.body.classList.remove('home-locked'); 
+            document.body.classList.add('home-active');
+            
+            // 【关键点】直接不显示，不占位，保持是你喜欢的“偏上”位置
+            var btn = document.getElementById('landing-btn-container');
+            if(btn) btn.style.display = 'none'; 
+            
+            // 文章列表直接显示
+            var postList = document.getElementById('hidden-post-list');
+            if(postList) {
+                postList.classList.add('visible');
+                postList.style.transition = 'none'; 
+                
+                // 布局修正
+                var page = document.querySelector('.page');
+                if(page) page.style.paddingTop = '5vh';
+            }
+        } else {
+            // === 情况 B: 第一次来 ===
+            document.body.classList.add('home-locked');
+        }
+    }
+
+    // 3. 按钮点击触发函数
+    function activateBlog() {
+        sessionStorage.setItem('homeVisited', 'true');
+        
+        document.body.classList.remove('home-locked');
+        document.body.classList.add('home-active');
+        
+        // 【关键点】按钮动画：不仅变透明，还要把高度缩为0，让下面内容升上来
+        var btn = document.getElementById('landing-btn-container');
+        if(btn) {
+            // 开启平滑过渡
+            btn.style.transition = 'all 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+            
+            // 1. 变透明
+            btn.style.opacity = '0';
+            btn.style.pointerEvents = 'none';
+            
+            // 2. 收缩空间 (把位置让出来，让文章升上来)
+            btn.style.height = '0';
+            btn.style.marginTop = '0';
+            btn.style.marginBottom = '0';
+            btn.style.overflow = 'hidden';
+        }
+        
+        // 文章显示
+        var postList = document.getElementById('hidden-post-list');
+        if(postList) postList.classList.add('visible');
+    }
+
+    // 立即执行
+    initPage();
+</script>
