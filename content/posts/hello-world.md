@@ -1,15 +1,15 @@
 ---
 title: "天际私语：博客的毁灭与重生"
 date: 2025-11-27T21:15:00+08:00
-description: "从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几年。"
+description: "从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几个月。"
 draft: false
 author: "Sky"
 # ====================
 # 🖼️ 头图设置 (核心需求)
 # ====================
 # 请确保 static/images/ 目录下有这张图片，否则留空或删除
-featuredImage: ""
-featuredImagePreview: "/images/blog-restart.jpg" # 专门设置预览图
+featuredImage: "/images/blog-restart.jpg"
+featuredImagePreview: "" # 专门设置预览图
 
 
 # 分类与标签
