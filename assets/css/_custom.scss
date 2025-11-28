@@ -482,3 +482,72 @@ body:not(.home) .archive {
     }
     */
 }
+
+
+/* assets/css/_custom.scss 追加内容 */
+
+/* =========================================
+   右侧目录 (TOC) 样式美化
+   ========================================= */
+.toc {
+  /* 1. 完美复刻文章盒子的“皮肤” */
+  background-color: rgba(255, 255, 255, 0.95) !important; /* 同款半透明白 */
+  backdrop-filter: blur(10px);         /* 毛玻璃 */
+  -webkit-backdrop-filter: blur(10px);
+  
+  border-radius: 15px;                 /* 圆角 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 阴影 */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* 边框高光 */
+
+  /* 2. 布局调整 */
+  padding: 1.5rem 1rem !important;     /* 给文字留点呼吸空间 */
+  margin-top: 0 !important;            /* 防止它跑得太偏 */
+  
+  /* 3. 限制最大高度，防止目录太长超出盒子 */
+  max-height: 80vh;
+  overflow-y: auto; /* 内容多了可以滚动 */
+  
+  /* 4. 强制修改文字颜色 */
+  /* 因为背景变白了，必须把文字改成深色，否则可能看不清 */
+  .toc-title {
+      color: #333 !important;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
+      border-bottom: 2px solid #eaecef;
+  }
+
+  a {
+      color: #555 !important; /* 普通链接深灰色 */
+      transition: all 0.2s;
+      padding: 2px 5px;
+      border-radius: 4px;
+      display: block; /* 让整行都能点 */
+  }
+
+  /* 5. 鼠标悬停和选中状态 */
+  a:hover {
+      background-color: rgba(0, 0, 0, 0.05); /* 鼠标放上去有淡淡的灰色背景 */
+      color: #000 !important;
+      text-decoration: none;
+  }
+
+  /* 当前正在阅读的章节高亮 */
+  a.active {
+      color: #0061b2 !important; /* 变成醒目的蓝色 (可按需改色) */
+      font-weight: bold;
+      background-color: rgba(0, 97, 178, 0.1); /* 淡淡的蓝色背景 */
+  }
+}
+
+/* 隐藏滚动条但保留功能 (Webkit内核浏览器) */
+.toc::-webkit-scrollbar {
+    width: 4px;
+}
+.toc::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+.toc::-webkit-scrollbar-track {
+    background: transparent;
+}
