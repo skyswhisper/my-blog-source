@@ -10,7 +10,7 @@ author: "Sky"
 # 请确保 static/images/ 目录下有这张图片，否则留空或删除
 featuredImage: "/images/blog-restart.jpg"
 featuredImagePreview: "" # 专门设置预览图
-
+featuredImageCaption: "图片来源：壁纸汇"
 
 # 分类与标签
 categories: ["技术杂谈", "建站日志"]

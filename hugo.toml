@@ -111,12 +111,12 @@ weight = 4
 icon = "fa-solid fa-tags"
 
 [[menu.main]]
-identifier = "skyswhisper"
+identifier = "whisper"
 parent = ""
 pre = ""
 post = ""
 name = "私语"
-url = "/skyswhisper/"
+url = "/whisper/"
 title = ""
 weight = 5
 

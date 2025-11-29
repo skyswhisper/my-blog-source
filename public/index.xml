@@ -6,8 +6,16 @@
     <description>天际私语</description>
     <generator>Hugo 0.152.2 &amp; FixIt v0.4.0-alpha.3-20251124100610-99fd4fb7</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 29 Nov 2025 01:48:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 29 Nov 2025 11:36:00 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>想做的事0</title>
+      <link>http://localhost:1313/posts/plan0/</link>
+      <pubDate>Sat, 29 Nov 2025 11:36:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/plan0/</guid>
+      <category domain="http://localhost:1313/categories/%E8%AE%A1%E5%88%92/">计划</category>
+      <description>&lt;img src=&#34;http://localhost:1313/images/plan.jpg&#34; alt=&#34;featured image&#34; referrerpolicy=&#34;no-referrer&#34;&gt;&lt;h1 class=&#34;heading-element&#34; id=&#34;今年有很多事想做&#34;&gt;&lt;span&gt;今年有很多事想做：&lt;/span&gt;&#xA;  &lt;a href=&#34;#%e4%bb%8a%e5%b9%b4%e6%9c%89%e5%be%88%e5%a4%9a%e4%ba%8b%e6%83%b3%e5%81%9a&#34; class=&#34;heading-mark&#34;&gt;&#xA;    &lt;svg class=&#34;octicon octicon-link&#34; viewBox=&#34;0 0 16 16&#34; version=&#34;1.1&#34; width=&#34;16&#34; height=&#34;16&#34; aria-hidden=&#34;true&#34;&gt;&lt;path d=&#34;m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z&#34;&gt;&lt;/path&gt;&lt;/svg&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;学习无刷电机的驱动&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;好学长给了我一个40云台电机，说这个东西和关节电机差不多，学学看&lt;/p&gt;&#xA;&lt;p&gt;（实际上关节电机是把减速器做进电机里的，还是有差别）&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;尝试制作关节电机常用的减速器&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;这次试试3D打印的摆线针轮减速器，没有谐波减速器那样的柔轮，更有可能实现&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;学习python与机器学习&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;想做具身智能，但是感觉不太靠谱，不太清楚行业上是怎么解决不确定性和稳定性之间的冲突的&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;制作摄像头高速巡线小车&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;被别人的开源小车整的有点郁闷，做一个无刷摄像头的&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;制作ar4开源机械臂&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;做制造中心用的，想做一个多头多功能的机械臂。&lt;/p&gt;&#xA;&lt;p&gt;至少具备高强度材料的大体积3D打印，扫描建模，模型修复这三个功能，先做一个开源的学一下&lt;/p&gt;&#xA;</description>
+    </item>
     <item>
       <title>天际私语：博客的毁灭与重生</title>
       <link>http://localhost:1313/posts/hello-world/</link>
