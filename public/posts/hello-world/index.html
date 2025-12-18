@@ -9,8 +9,8 @@
   <meta itemprop="name" content="天际私语：博客的毁灭与重生">
   <meta itemprop="description" content="从 Kernel Panic 到 Cloudflare 宕机，记录我与服务器斗智斗勇的这几个月。">
   <meta itemprop="datePublished" content="2025-11-27T21:15:00+08:00">
-  <meta itemprop="dateModified" content="2025-11-29T02:49:49+08:00">
-  <meta itemprop="wordCount" content="1211">
+  <meta itemprop="dateModified" content="2025-12-09T12:29:09+08:00">
+  <meta itemprop="wordCount" content="1191">
   <meta itemprop="keywords" content="Hugo,Linux,故障复盘"><meta property="og:url" content="http://localhost:1313/posts/hello-world/">
   <meta property="og:site_name" content="天际私语">
   <meta property="og:title" content="天际私语：博客的毁灭与重生">
@@ -19,7 +19,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-11-27T21:15:00+08:00">
-    <meta property="article:modified_time" content="2025-11-29T02:49:49+08:00">
+    <meta property="article:modified_time" content="2025-12-09T12:29:09+08:00">
     <meta property="article:tag" content="Hugo">
     <meta property="article:tag" content="Linux">
     <meta property="article:tag" content="故障复盘">
@@ -41,8 +41,8 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/posts\/hello-world\/"
-    },"genre": "posts","keywords": "Hugo, Linux, 故障复盘","wordcount":  1211 ,
-    "url": "http:\/\/localhost:1313\/posts\/hello-world\/","datePublished": "2025-11-27T21:15:00+08:00","dateModified": "2025-11-29T02:49:49+08:00","publisher": {
+    },"genre": "posts","keywords": "Hugo, Linux, 故障复盘","wordcount":  1191 ,
+    "url": "http:\/\/localhost:1313\/posts\/hello-world\/","datePublished": "2025-11-27T21:15:00+08:00","dateModified": "2025-12-09T12:29:09+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -85,7 +85,7 @@
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>天际私语：博客的毁灭与重生</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Sky</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" class="post-category" title="分类 - 技术杂谈"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 技术杂谈</a>&ensp;<a href="/categories/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/" class="post-category" title="分类 - 建站日志"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 建站日志</a></span></div><div class="post-meta-line"><span title="发布于 2025-11-27 21:15:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-11-27">2025-11-27</time></span>&nbsp;<span title="更新于 2025-11-29 02:49:49"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2025-11-29">2025-11-29</time></span>&nbsp;<span title="1211 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1300 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
+      Sky</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%8A%80%E6%9C%AF%E6%9D%82%E8%B0%88/" class="post-category" title="分类 - 技术杂谈"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 技术杂谈</a>&ensp;<a href="/categories/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/" class="post-category" title="分类 - 建站日志"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 建站日志</a></span></div><div class="post-meta-line"><span title="发布于 2025-11-27 21:15:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-11-27">2025-11-27</time></span>&nbsp;<span title="更新于 2025-12-09 12:29:09"><i class="fa-regular fa-calendar-check fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-09">2025-12-09</time></span>&nbsp;<span title="1191 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1200 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
     </div><div class="featured-image"><img src='/images/blog-restart.jpg' alt="/images/blog-restart.jpg"></div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -93,24 +93,24 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#-前传老旧笔记本上的-wordpress">🕰️ 前传：老旧笔记本上的 WordPress</a></li>
-    <li><a href="#-崩溃连锁硬件的花式死亡">💥 崩溃连锁：硬件的“花式死亡”</a></li>
-    <li><a href="#-终结云端的崩塌">☁️ 终结：云端的崩塌</a></li>
-    <li><a href="#-重生拥抱-hugo-与-cloudflare-pages">🚀 重生：拥抱 Hugo 与 Cloudflare Pages</a></li>
+    <li><a href="#老旧笔记本上的-wordpress">老旧笔记本上的 WordPress</a></li>
+    <li><a href="#硬件的花式死亡">硬件的“花式死亡”</a></li>
+    <li><a href="#云端的崩塌">云端的崩塌</a></li>
+    <li><a href="#拥抱-hugo-与-cloudflare-pages">拥抱 Hugo 与 Cloudflare Pages</a></li>
   </ul>
 </nav></div>
       </div><div class="content" id="content"><blockquote>
 <p><strong>我的童年女神，在此致敬治愈我一生的童年</strong></p>
 </blockquote>
-<h2 class="heading-element" id="-前传老旧笔记本上的-wordpress"><span>🕰️ 前传：老旧笔记本上的 WordPress</span>
-  <a href="#-%e5%89%8d%e4%bc%a0%e8%80%81%e6%97%a7%e7%ac%94%e8%ae%b0%e6%9c%ac%e4%b8%8a%e7%9a%84-wordpress" class="heading-mark">
+<h2 class="heading-element" id="老旧笔记本上的-wordpress"><span>老旧笔记本上的 WordPress</span>
+  <a href="#%e8%80%81%e6%97%a7%e7%ac%94%e8%ae%b0%e6%9c%ac%e4%b8%8a%e7%9a%84-wordpress" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h2><p>上大学的时候我看见其他学长写的博客，觉得很有趣，于是准备尝试搭一个博客。</p>
 <p>我的第一个博客用的是 <strong>WordPress</strong> 框架。</p>
 <p>当时我正在做 3D 打印机，手里正好收了一台 <strong>2011 年的旧笔记本电脑</strong> 做上位机，本着物尽其用的原则，我把第一个博客部署在了那上面。</p>
-<h2 class="heading-element" id="-崩溃连锁硬件的花式死亡"><span>💥 崩溃连锁：硬件的“花式死亡”</span>
-  <a href="#-%e5%b4%a9%e6%ba%83%e8%bf%9e%e9%94%81%e7%a1%ac%e4%bb%b6%e7%9a%84%e8%8a%b1%e5%bc%8f%e6%ad%bb%e4%ba%a1" class="heading-mark">
+<h2 class="heading-element" id="硬件的花式死亡"><span>硬件的“花式死亡”</span>
+  <a href="#%e7%a1%ac%e4%bb%b6%e7%9a%84%e8%8a%b1%e5%bc%8f%e6%ad%bb%e4%ba%a1" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h2><p>然后有趣的事情就发生了，那台老电脑的处理器内存和硬盘全部都有问题，第一周运行的时候还好，到了第二周，各种问题开始出现。</p>
@@ -134,14 +134,14 @@
   </div>
 </div>
 <p>以上这些问题直接导致了我很长一段时间不接受二手的电子产品，感觉亏麻了。</p>
-<h2 class="heading-element" id="-终结云端的崩塌"><span>☁️ 终结：云端的崩塌</span>
-  <a href="#-%e7%bb%88%e7%bb%93%e4%ba%91%e7%ab%af%e7%9a%84%e5%b4%a9%e5%a1%8c" class="heading-mark">
+<h2 class="heading-element" id="云端的崩塌"><span>云端的崩塌</span>
+  <a href="#%e4%ba%91%e7%ab%af%e7%9a%84%e5%b4%a9%e5%a1%8c" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h2><p>就是这样不断的修复，直到 2025 年 11 月 18 号前几天，Docker 突然打不开了。因为我的网站是跑在 Docker 容器里的，这直接导致网站失联。经过检查，是因为设置的 IP 地址和现有设备冲突导致的网络问题。当时手头有其他事情，就没及时解决。</p>
 <p>然而，到了 18 号，<strong>Cloudflare</strong> 突然崩溃了，导致了全球接近一半的互联网宕机 4 小时（不过中国内地的网络基本没受影响，所以大家可能感觉不到）。我第一个博客用的就是cf的服务，所以也原地爆炸了，这件事可以说让我彻底放弃了那个博客。</p>
-<h2 class="heading-element" id="-重生拥抱-hugo-与-cloudflare-pages"><span>🚀 重生：拥抱 Hugo 与 Cloudflare Pages</span>
-  <a href="#-%e9%87%8d%e7%94%9f%e6%8b%a5%e6%8a%b1-hugo-%e4%b8%8e-cloudflare-pages" class="heading-mark">
+<h2 class="heading-element" id="拥抱-hugo-与-cloudflare-pages"><span>拥抱 Hugo 与 Cloudflare Pages</span>
+  <a href="#%e6%8b%a5%e6%8a%b1-hugo-%e4%b8%8e-cloudflare-pages" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
 </h2><p>后来又看见学长使用了静态网站部署在github page上的方法，觉得很有极客感，我认为这种安全稳定且免费的静态网站才更加适合个人用户，所以也开始尝试，这就是当前网站的来历。</p>
@@ -158,7 +158,7 @@
 </div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
-      <div class="post-info-mod"><span title="更新于 2025-11-29 02:49:49">更新于 2025-11-29&nbsp;</span>
+      <div class="post-info-mod"><span title="更新于 2025-12-09 12:29:09">更新于 2025-12-09&nbsp;</span>
       </div><div class="post-info-license">
             <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
           </div></div><div class="post-info-line">
@@ -175,7 +175,7 @@
     <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/hugo/" class="post-tag" title="标签 - Hugo">Hugo</a><a href="/tags/linux/" class="post-tag" title="标签 - Linux">Linux</a><a href="/tags/%E6%95%85%E9%9A%9C%E5%A4%8D%E7%9B%98/" class="post-tag" title="标签 - 故障复盘">故障复盘</a></section>
     <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/plan0/" class="post-nav-item" rel="next" title="想做的事0">想做的事0<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+  </div><div class="post-nav"><a href="/posts/desing_of_pcb/" class="post-nav-item" rel="next" title="Ch32v203f6p6开发板">Ch32v203f6p6开发板<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <script src="https://giscus.app/client.js"
         data-repo="skyswhisper/my-blog-source"
@@ -200,10 +200,10 @@
         <h2 class="toc-title">目录</h2>
         <div class="toc-content" id="toc-content-drawer"><nav >
   <ul>
-    <li><a href="#-前传老旧笔记本上的-wordpress">🕰️ 前传：老旧笔记本上的 WordPress</a></li>
-    <li><a href="#-崩溃连锁硬件的花式死亡">💥 崩溃连锁：硬件的“花式死亡”</a></li>
-    <li><a href="#-终结云端的崩塌">☁️ 终结：云端的崩塌</a></li>
-    <li><a href="#-重生拥抱-hugo-与-cloudflare-pages">🚀 重生：拥抱 Hugo 与 Cloudflare Pages</a></li>
+    <li><a href="#老旧笔记本上的-wordpress">老旧笔记本上的 WordPress</a></li>
+    <li><a href="#硬件的花式死亡">硬件的“花式死亡”</a></li>
+    <li><a href="#云端的崩塌">云端的崩塌</a></li>
+    <li><a href="#拥抱-hugo-与-cloudflare-pages">拥抱 Hugo 与 Cloudflare Pages</a></li>
   </ul>
 </nav></div>
       </div>

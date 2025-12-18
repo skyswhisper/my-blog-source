@@ -1,0 +1,23 @@
+---
+title: "ch32v203f6p6开发板"
+date: 2025-12-18T19:51:00+08:00
+lastmod: 2025-12-18T19:51:00+08:00
+draft: false                       # 是否草稿
+author: "sky"                 # 优先使用此处的作者，覆盖全局配置
+categories: ["项目作品"]
+keywords: ["Hugo教程", "博客搭建"]  # 针对搜索引擎的关键词
+tags: ["pcb", "开发板","ch32v203f6p6"]
+weight: 0                         # 置顶权重：数字越小越靠前，0 为默认排序
+description: "ch32v203f6p6开发板"
+summary: "ch32v203f6p6开发板"
+
+# 首页列表中显示的预览图 (如果不填，默认用上面的 featuredImage)
+featuredImagePreview: "/images/desing-of-pcb.webp" 
+# 封面图的标题/版权文字
+featuredImageCaption: "图片来源:电脑截屏"
+
+lightgallery: true                # 开启文章内图片的灯箱效果 (点击放大)
+comment: true                     # 是否开启评论 (覆盖全局配置)
+---
+
+HH

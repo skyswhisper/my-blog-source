@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>项目作品 - 分类 - 天际私语</title>
+    <link>http://localhost:1313/categories/%E9%A1%B9%E7%9B%AE%E4%BD%9C%E5%93%81/</link>
+    <description>天际私语</description>
+    <generator>Hugo 0.152.2 &amp; FixIt v0.4.0-alpha.3-20251124100610-99fd4fb7</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Dec 2025 19:51:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E9%A1%B9%E7%9B%AE%E4%BD%9C%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ch32v203f6p6开发板</title>
+      <link>http://localhost:1313/posts/desing_of_pcb/</link>
+      <pubDate>Thu, 18 Dec 2025 19:51:00 +0800</pubDate>
+      <guid>http://localhost:1313/posts/desing_of_pcb/</guid>
+      <category domain="http://localhost:1313/categories/%E9%A1%B9%E7%9B%AE%E4%BD%9C%E5%93%81/">项目作品</category>
+      <description>ch32v203f6p6开发板</description>
+    </item>
+  </channel>
+</rss>
