@@ -3,7 +3,7 @@
 <!-- 1. 底层背景 -->
 <div id="static-bg" style="
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
-    background-image: url('/images/bg.jpg'); 
+    background-image: url('/images/bg1.jpg'); 
     background-size: cover;
     background-position: center;
     filter: brightness(1.0) blur(5px);
@@ -22,7 +22,7 @@
     
     // ============ 【配置区】 ============
     const CONFIG = {
-        imgSrc: '/images/bg.jpg', // 【关键】必须和上面的背景图一致
+        imgSrc: '/images/bg1.jpg', // 【关键】必须和上面的背景图一致
         
         // 切片形状
         cols: 10,             // 列数 (越多越细腻)
