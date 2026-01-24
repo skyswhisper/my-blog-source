@@ -4,7 +4,7 @@ date: 2025-12-18T19:51:00+08:00
 lastmod: 2025-12-18T19:51:00+08:00
 draft: false                       # 是否草稿
 author: "sky"                 # 优先使用此处的作者，覆盖全局配置
-categories: ["项目作品"]
+#categories: ["项目作品"]
 keywords: ["开发板","pcb","ch32v203f6p6"]  # 针对搜索引擎的关键词
 tags: ["开发板","pcb","ch32v203f6p6"]
 weight: 0                         # 置顶权重：数字越小越靠前，0 为默认排序
