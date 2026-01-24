@@ -6,10 +6,10 @@
     <description>天际私语</description>
     <generator>Hugo 0.152.2 &amp; FixIt v0.4.0-alpha.3-20251124100610-99fd4fb7</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Dec 2025 19:51:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Dec 2025 22:43:48 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ch32v203f6p6开发板</title>
+      <title>CH32v203f6p6开发板</title>
       <link>http://localhost:1313/posts/desing_of_pcb/</link>
       <pubDate>Thu, 18 Dec 2025 19:51:00 +0800</pubDate>
       <guid>http://localhost:1313/posts/desing_of_pcb/</guid>
