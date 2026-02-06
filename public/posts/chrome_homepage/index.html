@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>浏览器主页被篡改的问题来源和解决方法 - 天际私语</title><meta name="author" content="sky">
+<meta name="description" content="😅我的浏览器主页又双叒叕被篡改了"><meta name="keywords" content='浏览器, chrome, 浏览器主页被篡改的解决方法'>
+  <meta itemprop="name" content="浏览器主页被篡改的问题来源和解决方法">
+  <meta itemprop="description" content="😅我的浏览器主页又双叒叕被篡改了">
+  <meta itemprop="datePublished" content="2026-01-29T19:51:00+08:00">
+  <meta itemprop="dateModified" content="2026-01-29T19:51:00+08:00">
+  <meta itemprop="wordCount" content="956">
+  <meta itemprop="keywords" content="浏览器,chrome,浏览器主页被篡改的解决方法"><meta property="og:url" content="http://localhost:1313/posts/chrome_homepage/">
+  <meta property="og:site_name" content="天际私语">
+  <meta property="og:title" content="浏览器主页被篡改的问题来源和解决方法">
+  <meta property="og:description" content="😅我的浏览器主页又双叒叕被篡改了">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-29T19:51:00+08:00">
+    <meta property="article:modified_time" content="2026-01-29T19:51:00+08:00">
+    <meta property="article:tag" content="浏览器">
+    <meta property="article:tag" content="Chrome">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="浏览器主页被篡改的问题来源和解决方法">
+  <meta name="twitter:description" content="😅我的浏览器主页又双叒叕被篡改了">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="http://localhost:1313/posts/chrome_homepage/" title="浏览器主页被篡改的问题来源和解决方法 - 天际私语" /><link rel="prev" type="text/html" href="http://localhost:1313/posts/two_flight_controller/" title="两个超小飞控" /><link rel="alternate" type="text/markdown" href="http://localhost:1313/posts/chrome_homepage/index.md" title="浏览器主页被篡改的问题来源和解决方法 - 天际私语"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "浏览器主页被篡改的问题来源和解决方法",
+    "inLanguage": "zh-cn",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/localhost:1313\/posts\/chrome_homepage\/"
+    },"genre": "posts","keywords": "浏览器, chrome","wordcount":  956 ,
+    "url": "http:\/\/localhost:1313\/posts\/chrome_homepage\/","datePublished": "2026-01-29T19:51:00+08:00","dateModified": "2026-01-29T19:51:00+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "sky"
+      },"description": "😅我的浏览器主页又双叒叕被篡改了"
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="天际私语"><span class="header-title-text">天际私语</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 全部文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/program/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 项目作品</a></li><li class="menu-item">
+              <a class="menu-link" href="/study/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 技能学习</a></li><li class="menu-item">
+              <a class="menu-link" href="/friends/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item">
+              <a class="menu-link" href="/whisper/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 私语</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/" title="关于我"><i class='fa-solid fa-user-circle fa-fw me-1'></i> 关于我</a></li><li class="menu-item delimiter"></li><li class="menu-item theme-switch" role="button" aria-label="切换主题" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="天际私语"><span class="header-title-text">天际私语</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 全部文章</a></li><li class="menu-item"><a class="menu-link" href="/program/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 项目作品</a></li><li class="menu-item"><a class="menu-link" href="/study/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 技能学习</a></li><li class="menu-item"><a class="menu-link" href="/friends/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 友链</a></li><li class="menu-item"><a class="menu-link" href="/whisper/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 私语</a></li><li class="menu-item"><a class="menu-link" href="/about/" title="关于我"><i class='fa-solid fa-user-circle fa-fw me-1'></i> 关于我</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>浏览器主页被篡改的问题来源和解决方法</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      sky</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E6%8A%80%E8%83%BD%E5%AD%A6%E4%B9%A0/" class="post-category" title="分类 - 技能学习"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 技能学习</a></span></div><div class="post-meta-line"><span title="发布于 2026-01-29 19:51:00"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2026-01-29">2026-01-29</time></span>&nbsp;<span title="956 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1000 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 2 分钟</span>&nbsp;</div>
+    </div><div class="featured-image"><img src='/images/chrome_homepage.png' alt="/images/chrome_homepage.png"></div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#傻360篡改我浏览器主页">😅傻*360篡改我浏览器主页😅</a></li>
+    <li><a href="#解决方法">😲解决方法</a></li>
+    <li><a href="#找出真凶">😎找出真凶</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 class="heading-element" id="傻360篡改我浏览器主页"><span>😅傻*360篡改我浏览器主页😅</span>
+  <a href="#%e5%82%bb360%e7%af%a1%e6%94%b9%e6%88%91%e6%b5%8f%e8%a7%88%e5%99%a8%e4%b8%bb%e9%a1%b5" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>事情开始在几个月前的某一天，我在实验室打开电脑准备写点小代码，我先是熟练的把各种软件都点了一遍，还顺手点了chrome，然后靠在椅子背上等他们全打开，然后过了几秒钟，突然在我眼前出现了一个陌生的界面，我定睛一看，chrome主页变成360了！</p>
+<p>说实话当时有那么一瞬间我感到了生理性的不适😓，我是一个连edge的仅标题主页都觉得太乱的人，突然看到干净可爱的谷歌搜索主页变成了邪恶丑陋的360，我就感觉chrome像是被强奸了一样，当时没多想直接把chrome重置了。</p>
+<p>后来这种情况又出现了一次，还是邪恶的360，我很好奇是怎么了，于是检查了chrome的设置，发现是起始页面被篡改成了360，改过来就好了。
+<figure><a class="lightgallery" href="/images/chrome_homepage3.png" title="起始页面" data-thumbnail="/images/chrome_homepage3.png" data-sub-html="<h2>起始页面</h2><p>起始页面</p>"><img loading="lazy" src='/images/chrome_homepage3.png' alt="起始页面"></a><figcaption class="image-caption">起始页面</figcaption>
+  </figure>
+然后我又开心的用起了chrome。</p>
+<hr>
+<p>不过要是一直这样还好，但是又过了几周，我的chrome 主页又被劫持了，这次劫持的方法是修改快捷方式的指向。
+<figure><a class="lightgallery" href="/images/chrome_homepage4.png" title="快捷方式" data-thumbnail="/images/chrome_homepage4.png" data-sub-html="<h2>快捷方式</h2><p>快捷方式</p>"><img loading="lazy" src='/images/chrome_homepage4.png' alt="快捷方式"></a><figcaption class="image-caption">快捷方式</figcaption>
+  </figure>
+在快捷方式后面加了点东西，通过命令行手段强行在浏览器打开之后打开其他界面，并且上了权限锁，在我想要修改的时候不让我改。
+<figure><a class="lightgallery" href="/images/chrome_homepage5.png" title="权限锁" data-thumbnail="/images/chrome_homepage5.png" data-sub-html="<h2>权限锁</h2><p>权限锁</p>"><img loading="lazy" src='/images/chrome_homepage5.png' alt="权限锁"></a><figcaption class="image-caption">权限锁</figcaption>
+  </figure>
+我一怒之下就<del>怒了一下</del>直接把这个快捷方式给删了，重新换了个新的只读的快捷方式，问题这么愉快的解决了。</p>
+<h2 class="heading-element" id="解决方法"><span>😲解决方法</span>
+  <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>大概就这几个，等遇到了在补充。</p>
+<ul>
+<li>
+<p>检查浏览器设置的起始页面是否被篡改</p>
+</li>
+<li>
+<p>检查浏览器的搜索引擎是不是你要的那个</p>
+</li>
+<li>
+<p>检查快捷方式目标位置后面是否又其他的命令</p>
+</li>
+<li>
+<p>检查浏览器插件有没有可疑的</p>
+</li>
+<li>
+<p>输入chrome://policy，看看有没有莫名其妙的策略，如果有，说明被组策略劫持了</p>
+</li>
+<li>
+<p>用<strong>优秀的</strong>杀毒软件查一遍，有的原因个人排查太费时间</p>
+</li>
+</ul>
+<p>话说改快捷方式的时候记得把任务栏的快捷方式重新设置一下，因为它和桌面的快捷方式是相互独立的。</p>
+<h2 class="heading-element" id="找出真凶"><span>😎找出真凶</span>
+  <a href="#%e6%89%be%e5%87%ba%e7%9c%9f%e5%87%b6" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p><strong>你以为就这样结束了吗，那是不可能的，我一定要找出来强奸干净可爱的chrome的真凶！！！</strong></p>
+<p>于是乎我改回正常主页之后就放着不动了，经常打开chrome看什么时候在变成不同的主页尝试找出真凶。</p>
+<p>直到有一天，我在任务管理器里发现了这个
+<figure><a class="lightgallery" href="/images/chrome_homepage6.png" title="360后台" data-thumbnail="/images/chrome_homepage6.png" data-sub-html="<h2>360后台</h2><p>360后台</p>"><img loading="lazy" src='/images/chrome_homepage6.png' alt="360后台"></a><figcaption class="image-caption">360后台</figcaption>
+  </figure>
+小小的服务组件，竟然篡改我的浏览器主页😡</p>
+<p>😮原来是他们搞的鬼！直接删除，希望这下应该没问题了吧🥰</p>
+<p>话说其实被篡改后的主页网址后面会有一串类似id的东西，对应一个人，这个人把你的浏览器主页篡改了，然后公司通过这个确认谁贡献流量多，<del>所以理论上是可以查出来是谁干的</del>。</p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="更新于 2026-01-29 19:51:00">更新于 2026-01-29&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/chrome_homepage/index.md" title="阅读原始文档" class="link-to-markdown">阅读原始文档</a></span><span><a href="vscode://file/F:%5cmyblog%5ccontent%5cposts%5cchrome_homepage.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/chrome_homepage/" data-title="浏览器主页被篡改的问题来源和解决方法" data-hashtags="浏览器,chrome"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/chrome_homepage/" data-hashtag="浏览器"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/chrome_homepage/" data-title="浏览器主页被篡改的问题来源和解决方法" data-image="/images/chrome_homepage.png"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="post-tag" title="标签 - 浏览器">浏览器</a><a href="/tags/chrome/" class="post-tag" title="标签 - Chrome">Chrome</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/two_flight_controller/" class="post-nav-item" rel="prev" title="两个超小飞控"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>两个超小飞控</a></div>
+</div>
+<script src="https://giscus.app/client.js"
+        data-repo="skyswhisper/my-blog-source"
+        data-repo-id="R_kgDOQe1F1A"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOQe1F1M4CzKYl"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script></article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ul>
+    <li><a href="#傻360篡改我浏览器主页">😅傻*360篡改我浏览器主页😅</a></li>
+    <li><a href="#解决方法">😲解决方法</a></li>
+    <li><a href="#找出真凶">😎找出真凶</a></li>
+  </ul>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.152.2"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha.3-20251124100610-99fd4fb7"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025 - 2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="/"></a></span><span class="license footer-divider">除非另有说明，本站文章采用 <a rel='license external nofollow noopener noreffer' href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议。</span></div><div class="footer-line statistics"><span class="site-time" title='网站运行中……'><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden="true"></i><span class="run-times ms-1">网站运行中……</span></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="目录"><i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/lightgallery/lightgallery.min.js" defer></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js" defer></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/js/config/8d836761b8791eb54b63828713a76f2e.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>

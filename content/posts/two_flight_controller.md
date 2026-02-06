@@ -27,7 +27,7 @@ summary: "Use ch32v203f8u6 and rp2040 to make some little flight controllers"
 # 4. 封面图与视觉 (FixIt 核心)
 # ==============================
 # 文章详情页顶部的大图
-featuredImage: "/images/bg1.jpg" 
+featuredImage: "/images/two-flight-controller3.png" 
 # 首页列表中显示的预览图 (如果不填，默认用上面的 featuredImage)
 featuredImagePreview: "/images/two-flight-controller.png" 
 # 封面图的标题/版权文字
@@ -94,4 +94,4 @@ comment: true                     # 是否开启评论 (覆盖全局配置)
 ![原理图](/images/two-flight-controller1.png "ch32版原理图")
 
 
-* 详情见嘉立创开源。
+* 详情见[嘉立创开源](https://oshwhub.com/skywhispers/ch32v203-fei-kong)

@@ -21,7 +21,7 @@
 ![原理图](/images/two-flight-controller1.png "ch32版原理图")
 
 
-* 详情见嘉立创开源。
+* 详情见[嘉立创开源](https://oshwhub.com/skywhispers/ch32v203-fei-kong)
 
 
 ---
